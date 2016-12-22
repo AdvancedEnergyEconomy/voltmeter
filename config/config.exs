@@ -5,7 +5,10 @@
 # is restricted to this project.
 use Mix.Config
 
-config :kitto, root: Path.dirname(__DIR__), port: 4000
+config :kitto,
+  ip: {0, 0, 0, 0},
+  root: Path.dirname(__DIR__),
+  port: {:system, "PORT"} # set by Heroku
 
 # Use code_reload?: false to disable code reloading in development environment
 # Read More: https://github.com/kittoframework/kitto/wiki/Code-Reloading
