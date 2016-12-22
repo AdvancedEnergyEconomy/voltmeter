@@ -1,0 +1,2 @@
+defmodule Voltmeter do
+end
