@@ -15,7 +15,7 @@
   "keywords": [
     "webpack"
   ],
-  "author": "",
+  "author": "Advanced Energy Economy",
   "license": "MIT",
   "devDependencies": {
     "webpack-dev-server": "^1.14.1"
@@ -48,5 +48,13 @@
     "rickshaw": "1.6.0",
     "jquery": "2.2.3",
     "jquery-knob": "1.2.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdvancedEnergyEconomy/voltmeter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdvancedEnergyEconomy/voltmeter/issues"
+  },
+  "homepage": "https://github.com/AdvancedEnergyEconomy/voltmeter#readme"
 }
