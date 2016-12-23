@@ -21,6 +21,6 @@ defmodule Voltmeter.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:kitto, "~> 0.3.1"}]
+    [{:kitto, "~> 0.3.2"}]
   end
 end
