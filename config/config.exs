@@ -37,3 +37,7 @@ config :logger, :console,
 # secure.
 #
 # config :kitto, :auth_token: "asecret"
+
+config :voltmeter,
+  powersuite_token: System.get_env("POWERSUITE_TOKEN"),
+  powersuite_url: System.get_env("POWERSUITE_URL") || "http://powersuite.aee.net"
