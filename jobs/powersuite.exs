@@ -1,12 +1,13 @@
 use Kitto.Job.DSL
 
-job :powersuite_stats, every: {30, :seconds} do
-  stats = APIs.Powersuite.stats("filter[stat_type]=power_suite&limit=1")
-  [stat | _] = stats["stats"]
-  stat_data = stat["stat"]["stat_data"]
-  bill_state_counts = APIs.Powersuite.state_stats(stat_data)
-  dockets_count = stat_data["docket_count"]
-
-  broadcast! :bill_state_counts, bill_state_counts
-  broadcast! :dockets_count, %{value: dockets_count}
+job :powersuite_stats, every: {1, :hour} do
+  stat_data = APIs.Powersuite.stats("filter[stat_type]=power_suite&limit=1")
+    |> Map.get("stats")
+    |> Enum.at(0)
+    |> Map.get("stat")
+    |> Map.get("stat_data")
+  broadcast! :docket_count, %{value: stat_data["docket_count"]}
+  broadcast! :filing_count, %{value: stat_data["filing_count"]}
+  broadcast! :document_count, %{value: stat_data["document_count"]}
+  broadcast! :bill_count, %{value: stat_data["bill_count"]}
 end

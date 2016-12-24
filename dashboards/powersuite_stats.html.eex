@@ -1,18 +1,28 @@
 <div class="gridster">
   <ul>
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
       <div class="widget-powersuite"
-           data-source="bill_state_counts"
-           data-widget="List"
-           data-unordered="true"
-           data-title="Bills By State"
-           data-moreinfo="Latest Snapshot"></div>
+           data-source="docket_count"
+           data-widget="Number"
+           data-title="Dockets"></div>
     </li>
     <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
       <div class="widget-powersuite"
-           data-source="dockets_count"
+           data-source="filing_count"
            data-widget="Number"
-           data-title="Dockets"></div>
+           data-title="Filings"></div>
+    </li>
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div class="widget-powersuite"
+           data-source="document_count"
+           data-widget="Number"
+           data-title="Documents"></div>
+    </li>
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div class="widget-powersuite"
+           data-source="bill_count"
+           data-widget="Number"
+           data-title="Bills"></div>
     </li>
   </ul>
 </div>

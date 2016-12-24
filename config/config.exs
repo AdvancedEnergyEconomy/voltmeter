@@ -8,6 +8,7 @@ use Mix.Config
 config :kitto,
   ip: {0, 0, 0, 0},
   root: Path.dirname(__DIR__),
+  default_dashboard: "powersuite_stats",
   port: {:system, "PORT"} # set by Heroku
 
 # Use code_reload?: false to disable code reloading in development environment
